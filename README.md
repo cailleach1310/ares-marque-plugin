@@ -1,4 +1,4 @@
-# ares-marque-plugin
+# Ares Marque Plugin
 A plugin for handling marque stuff on games of Kushiel theme. 
 
 ## Credits
@@ -13,6 +13,8 @@ I've been doing this as some sort of coding project to learn AresMUSH. Now I'm p
 * Staff-side marque management commands from within the game.
 * Staff-side marque management route from the webportal.
 * Awarding achievements when completing phases of novice and adept.
+* Cron job based monthly marque progress for off camera assignations.
+* Additional raises can be applied by staff when apliccable.
 
 ### Prerequesites
 The marque plugin relies on the fact that 'Courtesan' is set up as a faction (group), and that ranks 'Novice', 'Adept', 'Courtesan', etc have been defined to that faction. When moving on from novice to adept rank, the marque will be started. When the marque is complete and has been acknowledged, the rank will change to (fully marqued) 'Courtesan'. 
