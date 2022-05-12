@@ -1,0 +1,11 @@
+---
+en:
+  marque:
+        courtesan_title_top_20: "Courtesans By %{name} - (Top 20)"
+        group_courtesan_title: "Courtesans By %{name}"
+        gender_courtesan_title: "Courtesans By Gender"
+        timezone_courtesan_title: "Timezone Census"
+        rank_courtesan_title: "Courtesans By Rank"
+        courtesan_types: "Courtesan Types"
+        courtesan_groups: "Courtesan Groups Available"
+

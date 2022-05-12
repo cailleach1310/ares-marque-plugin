@@ -1,0 +1,6 @@
+<p>
+<LinkTo @route="courtesan-management">[All]</LinkTo>&nbsp;
+{{#each this.houses as |house| }}
+<LinkTo @route="courtesan-management-house" @model={{house}}>[{{house}}]</LinkTo>&nbsp;
+{{/each}}
+</p>

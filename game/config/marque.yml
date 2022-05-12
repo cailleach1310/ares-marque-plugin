@@ -1,0 +1,58 @@
+---
+marque:
+  achievements:
+    debuted:
+      message: Had the debut, is now an Adept in Service of Naamah.
+      type: story
+    marque_acknowledged:
+      message: Completed the marque and had it acknowledged.
+      type: story
+  action_update_cron:
+    minute:
+    - 0
+    - 30
+  courtesan_fields:
+  - field: group
+    value: house
+    width: 17
+    title: House
+  - field: rank
+    width: 17
+    title: Rank
+  - field: marque
+    width: 17
+    title: Marque Progress
+  - field: action
+    width: 17
+    title: Action
+  marque_fields:
+  - field: name
+    width: 17
+    title: Name
+  - field: group
+    value: house
+    width: 17
+    title: House
+  - field: marque
+    width: 17
+    title: Progress
+  - field: last_on
+    width: 20
+    title: Last on
+  monthly_raise_amount: 3
+  monthly_raise_cron:
+    day:
+    - 1
+    hour:
+    - 1
+    minute:
+    - 15
+  monthly_raise_message: 'Due to the standard monthly marque progress, another #{monthly_raise_amount}
+    percent have been added to your Marque. You can check the state of your Marque
+    with the marque command or by looking at your profile on the web-portal. If you
+    had additional assignations  scened, please put in a request and we will apply
+    a bonus where applicable.'
+  monthly_raise_title: Monthly Marque Raise
+  permissions:
+    manage_marques: Allows managing other characters' marques.
+  shortcuts: {}

@@ -1,0 +1,56 @@
+{{page-title "courtesan-management"}}
+<h1>Courtesan Management</h1>
+
+<CourtesanNav @houses={{this.model.houses}} />
+
+<div class="table-responsive">
+
+<table class="table table-striped">
+  <thead>
+      <th></th>
+      {{#each this.model.courtesan.titles as |title|}}
+      <th>{{title}}</th>
+      {{/each}}
+  </thead>
+  
+  <tbody>
+    {{#each this.model.courtesan.courtesans as |char| }}
+    <tr>
+      {{#each-in char as |field value| }}
+        <td>
+          {{#if (eq field 'char')}}
+            <CharIconInline @char={{value}} />
+          {{else}} 
+            {{#if (eq field 'Marque Progress')}}
+               {{#if value}}
+                 <div class="xp-progress">
+                    <ProgressBar @currentValue={{value}} @maxValue="100" @bgColor="bg-success" @showLabel=true>
+                    </ProgressBar>
+                    <div class="progress-value">{{value}}%</div>
+                 </div>
+               {{/if}}
+              {{else}}
+                {{#if (eq field 'Action')}}
+                   {{#if (eq value 'Complete')}}
+                      <button name="acknowledge" {{action 'AcknowledgeMarque' char.char.name}} class="btn btn-secondary">Acknowledge Marque</button>
+                   {{else}}
+                     {{#if (eq value 'Debut')}}
+                          <button name="debut" {{action 'InitMarque' char.char.name}} class="btn btn-secondary">Start Marque</button>
+                     {{/if}}
+                   {{/if}}
+                {{else}}
+                  {{value}}
+              {{/if}}
+            {{/if}}  
+          {{/if}}  
+        </td>
+        {{/each-in}}
+    </tr>
+    {{/each}}
+  </tbody>
+
+</table>
+
+</div>
+
+{{outlet}}
