@@ -80,13 +80,13 @@ Add a route to the top bar menu for the admin management page. This view is limi
 
 For example:
 
-  top_navbar:
-(...)
-- title: Special
-  menu:
-    - title: Manage Marques
-      route: courtesan-management
-(...)
+      top_navbar:
+    (...)
+    - title: Special
+      menu:
+        - title: Manage Marques
+          route: courtesan-management
+    (...)
 
 
 ## Uninstallation
