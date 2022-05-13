@@ -7,6 +7,10 @@ module AresMUSH
       File.dirname(__FILE__)
     end
 
+    def self.version
+      "1.0"
+    end
+
     def self.shortcuts
       Global.read_config("marque", "shortcuts")
     end
