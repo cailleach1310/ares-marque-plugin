@@ -87,23 +87,21 @@ Courtesan management relies on courtesan ranks as defined below. If you want to 
 
 #### /aresmush/game/config/chargen.yml
 
+    chargen:
+    (...)
       special_blurb: |-
         Some concepts require additional attributes to be set.
         Adept concepts will set their marque at this stage:
         marque/set <state in percent>
-
+    (...)
       stages:
         special:
           title: Special Concepts
           text: 'Some concepts require additional attributes to be set.
-    Adept concepts
-            will set their marque at this stage: 
+            Adept concepts will set their marque at this stage: 
 
-    %xcmarque/set <state in percent>%xn
-    %xcmarque%xn
-            - shows the current progress.
-
-
+            %xcmarque/set <state in percent>%xn
+            %xcmarque%xn - shows the current progress.
 
 #### /aresmush/game/config/website.yml
 Add a route to the top bar menu for the admin management page. This route is limited to admin and coder roles for now. 
