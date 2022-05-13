@@ -1,0 +1,11 @@
+ <div role="tabpanel" class="tab-pane" id="special">
+         <div class="cg-tip"><AnsiFormat @text="Some concepts need to set additional information in the space below. Please note: You may have to save your changes and refresh the page before these additional fields will show." /></div>
+         {{#if char.custom.cg_adept}}
+         <hr>
+         <div class="cg-tip"><AnsiFormat @text="Adept concepts need to set the current state of progress on their marque here." /></div>
+         <br>
+         <p> <b>Marque Status (%):</b> </p>
+         <Input @type="integer" @size={{25}} @value={{char.custom.marque}} />
+         <br>
+         {{/if}}
+</div>

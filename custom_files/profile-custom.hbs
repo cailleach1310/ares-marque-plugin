@@ -1,0 +1,9 @@
+  <div id="systemmarque" class="tab-pane fade">
+      <div class="xp-ability-name"><br>Current progress in percent:</div>
+      <br>
+      <div class="xp-progress">
+         <ProgressBar @currentValue={{{this.char.custom.marque}}} @maxValue="100" @bgColor="bg-success" @showLabel=true>
+         </ProgressBar>
+         <div class="progress-value">{{{this.char.custom.marque}}}%</div>
+      </div>
+  </div>
