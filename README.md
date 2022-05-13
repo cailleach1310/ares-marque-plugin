@@ -53,27 +53,27 @@ Update with: custom_files/profile-custom-tabs.hbs
 #### /aresmush/game/config/demographics.yml
 Make sure that 'Courtesan' is set as faction. 
 
-(...)
-  groups:
-    Faction:
-      desc: Character class.
-      wiki: factions
-      values:
-        Courtesan: Servants of Naamah.
-(...)
+    (...)
+      groups:
+        Faction:
+          desc: Character class.
+          wiki: factions
+          values:
+            Courtesan: Servants of Naamah.
+    (...)
 
 #### /aresmush/game/config/ranks.yml
 Courtesan management relies on courtesan ranks as defined below. If you want to limit certain concepts, set the respective rank values to 'false'.
 
-  ranks:
-    (...)
-    Courtesan:
-      All:
-        Novice: true
-        Adept: true
-        Courtesan: true
-        Second: true
-        Dowayne: true
+      ranks:
+        (...)
+        Courtesan:
+          All:
+            Novice: true
+            Adept: true
+            Courtesan: true
+            Second: true
+            Dowayne: true
 
 #### /aresmush/game/config/website.yml
 Add a route to the top bar menu for the admin management page. This view is limited to admin and coders roles for now. 
