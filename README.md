@@ -5,9 +5,9 @@ A plugin for handling marque stuff on games of Kushiel theme.
 Lyanna@AresCentral
 
 ## Overview
-I've been doing this as some sort of coding project to learn AresMUSH. Now I'm putting it out there for anyone willing to use it. The marque affects the adept phase of courtesan life. If you want some code-side support of this in your Kushiel-based game, go ahead, use it as is or adapt it to your needs.
+Anyone familiar with the books or games of Kushiel theme will know that the marque is an aspect that only affects courtesan concepts, and more particularly, only novices and adepts. In fact the marque does not necessarily require code at all - it could be handled simply on basis of +requests, with the player declaring at some point they are starting or have completed the marque. Still, I've seen this being handled on code basis on mushes of the theme, and so I've been working on this as some sort of coding project to learn AresMUSH. Now I'm putting it out there for anyone willing to use it. If you want some code-side marque support in your Kushiel-based game, go ahead, use it as is or adapt it to your needs.
 
-The marque plugin requires only adjustments in the custom AresMUSH files, so it shouldn't affect future merges due to version upgrades. I've developed and tested this with v0.106 - v0.108.
+The marque plugin requires only adjustments in the custom AresMUSH files, so it shouldn't affect future merges and version upgrades. I've developed and tested this with v0.106 - v0.108.
 
 ### What this plugin covers
 * Chargen: Setting marque during chargen.
@@ -102,4 +102,4 @@ For example:
 ## Uninstallation
 
 ## License
-Same as AresMUSH
+Same as [AresMUSH](https://aresmush.com/license).
