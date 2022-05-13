@@ -47,7 +47,7 @@ marque:
     - 1
     minute:
     - 15
-  monthly_raise_message: 'Due to the standard monthly marque progress, another #{monthly_raise_amount}
+  monthly_raise_message: 'Due to the standard monthly marque progress, another three
     percent have been added to your Marque. You can check the state of your Marque
     with the marque command or by looking at your profile on the web-portal. If you
     had additional assignations  scened, please put in a request and we will apply
