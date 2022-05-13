@@ -7,6 +7,8 @@ Lyanna@AresCentral
 ## Overview
 I've been doing this as some sort of coding project to learn AresMUSH. Now I'm putting it out there for anyone willing to use it. The marque affects the adept phase of courtesan life. If you want some code-side support of this in your Kushiel-based game, go ahead, use it as is or adapt it to your needs.
 
+The marque plugin requires only adjustments in the custom parts of AresMUSH files, so it shouldn't be affected by future version upgrades. I've developed and tested this with v0.106 - v0.108.
+
 ### What this plugin covers
 * Chargen: Setting marque during chargen.
 * Profile: Making the marque part of the profile.
@@ -16,7 +18,7 @@ I've been doing this as some sort of coding project to learn AresMUSH. Now I'm p
 * Cron job based monthly marque progress for off camera assignations.
 * Additional raises can be applied by staff when appliccable.
 
-### Prerequesites
+### Prerequisites
 The marque plugin relies on the fact that 'Courtesan' is set up as a faction (group), and that ranks 'Novice', 'Adept', 'Courtesan', etc have been defined to that faction. When moving on from novice to adept rank, the marque will be started. When the marque is complete and has been acknowledged, the rank will change to (fully marqued) 'Courtesan'. 
 
 ## Installation
@@ -76,7 +78,7 @@ Courtesan management relies on courtesan ranks as defined below. If you want to 
             Dowayne: true
 
 #### /aresmush/game/config/website.yml
-Add a route to the top bar menu for the admin management page. This view is limited to admin and coders roles for now. 
+Add a route to the top bar menu for the admin management page. This view is limited to admin and coder roles for now. 
 
 For example:
 
