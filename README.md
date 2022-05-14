@@ -20,13 +20,13 @@ The marque plugin requires only adjustments in the custom AresMUSH files, so it 
 
 ### Screenshots
 In game view of the 'marque/list' command:
-![Client](https://github.com/cailleach1310/ares-marque-plugin/blob/master/images/marque_list_command.png)
+![Client](https://github.com/cailleach1310/ares-marque-plugin/blob/master/images/marque_list_command.PNG)
 
 Webportal view of the marque management route:
-![Web-Portal](https://github.com/cailleach1310/ares-marque-plugin/blob/master/images/courtesan-management-route.png)
+![Web-Portal](https://github.com/cailleach1310/ares-marque-plugin/blob/master/images/courtesan-management-route.PNG)
 
 Webportal view of the marque management house route:
-![Web-Portal](https://github.com/cailleach1310/ares-marque-plugin/blob/master/images/courtesan-management-house-route.png)
+![Web-Portal](https://github.com/cailleach1310/ares-marque-plugin/blob/master/images/courtesan-management-house-route.PNG)
 
 
 ### Prerequisites
