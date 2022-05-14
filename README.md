@@ -2,10 +2,10 @@
 A plugin for handling marque stuff on games of Kushiel theme. 
 
 ## Credits
-Lyanna@AresCentral
+Lyanna @ AresCentral
 
 ## Overview
-Anyone familiar with the books or games of Kushiel theme will know that the marque is an aspect that only affects courtesan concepts, and more particularly, only novices and adepts. In fact the marque does not necessarily require code at all - it could be handled simply on basis of +requests, with the player declaring at some point they are starting or have completed the marque. Still, I've seen this being handled on code basis on mushes of the theme, and so I've been working on this as some sort of coding project to learn AresMUSH. Now I'm putting it out there for anyone who'd like to use it. If you want some code-side marque support in your Kushiel-based game, go ahead, use it as is or adapt it to your needs.
+Anyone familiar with the books or games of Kushiel theme will know that the marque is an aspect that only affects courtesan concepts, and more particularly, only novices and adepts. In fact the marque does not necessarily require code at all - it could be handled simply on basis of +requests, with the player declaring at some point they are starting or have completed the marque. On other games of the theme, I've seen it handled with code support. Based on my code developed for the pennmush game *Marsilikos*, I've made this marque plugin my personal coding project, to learn the way AresMUSH is wired together. Now I'm putting it out there for anyone who'd like to use it. If you want some code-side marque support in your Kushiel-based game, go ahead, use it as is or adapt it to your needs.
 
 The marque plugin requires only adjustments in the custom AresMUSH files, so it shouldn't affect future merges and version upgrades. I've developed and tested this with v0.106 - v0.108.
 
@@ -27,6 +27,8 @@ This staff command can be used to check current marque progresses on the client.
 ### Webportal view of the courtesan management route
 ![courtesan-management](/images/courtesan_management_route.PNG)
 
+The courtesan management route is based heavily on the census code with some modifications. The route is only available to admin and coder roles.
+
 This view may look spammy, so please note the nav bar at the top that allows you to switch to a view of a single house/salon. The list is generated dynamically from all houses of approved courtesan characters. Unplayed houses won't get listed.
 
 Besides providing an overview of marque progresses, buttons will show in the 'Action' column if a staff-side action may be required. Novice characters will have their debut upcoming. Adepts who have completed their marque want to have it acknowledged. Both situations require communication about scenes to be had leading up to this change of status, and the eventual press of the button to trigger the start of a new phase.
@@ -34,10 +36,10 @@ Besides providing an overview of marque progresses, buttons will show in the 'Ac
 ### Webportal view of the marque management house route
 ![courtesan-management-house](/images/courtesan_management_house_route.PNG)
 
-Here we have the view for a single house. It could be an option to make this available to house leaders such as dowaynes and seconds, if the game philosophy aims at granting more responsibilities to players. For now, this view is limited to admin and coder roles.
+Here we have the view for a single house. For now, this view is limited to admin and coder roles. It could be an option to make this available to house leaders such as dowaynes and seconds as well. Maybe something to be tackled in the next version. 
 
 ## Prerequisites
-The marque plugin relies on the fact that 'Courtesan' is set up as a faction (group), and that ranks 'Novice', 'Adept', 'Courtesan', etc have been defined to that faction. When moving on from novice to adept rank, the marque will be started. When the marque is complete and has been acknowledged, the rank will change to (fully marqued) 'Courtesan'. Please make sure to add availaible courtesan houses and salons to the faction 'House', as **marque/list** and the webportal courtesan management pages will need this for their output. 
+The marque plugin relies on the fact that 'Courtesan' is set up as a faction (group), and that ranks 'Novice', 'Adept', 'Courtesan', etc have been defined to that faction. When moving on from novice to adept rank, the marque will be started. When the marque is complete and has been acknowledged, the rank will change to (fully marqued) 'Courtesan'. Please make sure to add availaible courtesan houses and salons to the group 'House', as **marque/list** and the webportal courtesan management pages will need this for their output. 
 
 ## Installation
 In the game, run: plugin/install https://github.com/cailleach1310/ares-marque-plugin
@@ -52,7 +54,7 @@ Update with: custom_files/custom_char_fields.rb
 Update with: custom_files/custom_app_review.rb
 
 ### Updating Custom Web Portal Chargen and Profile Files
-If you don't have any existing edits to these custom files, you can use the files in the custom_files folder of this repository as-is. If you do, then you may use them as templates to add the lines of code needed for eshtraits.
+If you don't have any existing edits to these custom files, you can use the files in the custom_files folder of this repository as-is. If you do, then you may use them as templates to add the lines of code needed for the marque plugin.
 
 #### ares-webportal/app/components/chargen-custom.js
 Update with: custom_files/chargen-custom.js
@@ -82,7 +84,7 @@ Make sure that 'Courtesan' is set as faction.
             Courtesan: Servants of Naamah.
     (...)
 
-Define available courtesan houses / salons for the game in the faction 'House'.
+Define available courtesan houses / salons for the game in the group 'House'.
 
 #### /aresmush/game/config/ranks.yml
 Courtesan management relies on courtesan ranks as defined below. If you want to limit certain concepts, set the respective rank values to 'false'.
