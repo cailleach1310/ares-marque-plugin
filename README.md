@@ -18,19 +18,26 @@ The marque plugin requires only adjustments in the custom AresMUSH files, so it 
 * Cron job based monthly marque progress for off camera assignations.
 * Additional raises can be applied by staff when appliccable.
 
-### Screenshots
-#### In game view of the 'marque/list' command
+## Screenshots
+### In game view of the 'marque/list' command
 ![marque-list](/images/marque_list_command.PNG)
 
-#### Webportal view of the courtesan management route
+This staff command can be used to check current marque progresses on the client.
+
+### Webportal view of the courtesan management route
 ![courtesan-management](/images/courtesan_management_route.PNG)
 
-#### Webportal view of the marque management house route
+This view may look spammy, so please note the nav bar at the top that allows you to switch to a view of a single house/salon. The list is generated dynamically from all houses of approved courtesan characters. Unplayed houses won't get listed.
+
+Besides providing an overview of marque progresses, buttons will show in the 'Action' column if a staff-side action may be required. Novice characters will have their debut upcoming. Adepts who have completed their marque want to have it acknowledged. Both situations require communication about scenes to be had leading up to this change of status, and the eventual press of the button to trigger the start of a new phase.
+
+### Webportal view of the marque management house route
 ![courtesan-management-house](/images/courtesan_management_house_route.PNG)
 
+Here we have the view for a single house. It could be an option to make this available to house leaders such as dowaynes and seconds, if the game philosophy aims at granting more responsibilities to players. For now, this view is limited to admin and coder roles.
 
-### Prerequisites
-The marque plugin relies on the fact that 'Courtesan' is set up as a faction (group), and that ranks 'Novice', 'Adept', 'Courtesan', etc have been defined to that faction. When moving on from novice to adept rank, the marque will be started. When the marque is complete and has been acknowledged, the rank will change to (fully marqued) 'Courtesan'. 
+## Prerequisites
+The marque plugin relies on the fact that 'Courtesan' is set up as a faction (group), and that ranks 'Novice', 'Adept', 'Courtesan', etc have been defined to that faction. When moving on from novice to adept rank, the marque will be started. When the marque is complete and has been acknowledged, the rank will change to (fully marqued) 'Courtesan'. Please make sure to add availaible courtesan houses and salons to the faction 'House', as **marque/list** and the webportal courtesan management pages will need this for their output. 
 
 ## Installation
 In the game, run: plugin/install https://github.com/cailleach1310/ares-marque-plugin
