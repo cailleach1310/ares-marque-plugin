@@ -5,9 +5,11 @@ A plugin for handling marque stuff on games of Kushiel theme.
 Lyanna @ AresCentral
 
 ## Overview
-Anyone familiar with the books or games of Kushiel theme will know that the marque is an aspect that only affects courtesan concepts, and more particularly, only novices and adepts. In fact the marque does not necessarily require code at all - it could be handled simply on basis of +requests, with the player declaring at some point they are starting or have completed the marque. On other games of the theme, I've seen it handled with code support. Based on my code developed for the pennmush game *Marsilikos*, I've made this marque plugin my personal coding project, to learn the way AresMUSH is wired together. Now I'm putting it out there for anyone who'd like to use it. If you want some code-side marque support in your Kushiel-based game, go ahead, use it as is or adapt it to your needs.
+What is a Marque? It is the sign of a courtesan house or salon, tattoed on the back of an adept. It can take upto three years to finish, as progress will be gradual. The adept pays the tattoo artist with money they have earned through so called 'patron gifts'.
 
-The marque plugin requires only adjustments in the custom AresMUSH files, so it shouldn't affect future merges and version upgrades. I've developed and tested this with v0.106 - v0.108.
+Anyone familiar with the books or games of Kushiel theme will know that the marque is an aspect that only affects a subset of characters, novices and adepts. In fact the marque does not necessarily require code at all - it could be handled simply on basis of +requests, with the player declaring at some point they are starting or have completed the marque. On other games of the theme, I've seen it handled with code support. Continuing from my code developed for the pennmush game Marsilikos, I've made this marque plugin my personal coding project, to learn more about the way AresMUSH as a platform is wired together. Now I'm putting this plugin out there for anyone who'd like to use it. If you want some code-side marque support in your Kushiel-based game, go ahead, use it as is or adapt it to your needs.
+
+The marque plugin requires only adjustments in the custom AresMUSH files, so it shouldn't affect future merges and version upgrades. I've tested this on versions v0.106 - v0.108.
 
 ### What this plugin covers
 * Chargen: Setting marque during chargen.
@@ -27,7 +29,7 @@ This staff command can be used to check current marque progresses on the client.
 ### Webportal view of the courtesan management route
 ![courtesan-management](/images/courtesan_management_route.PNG)
 
-The courtesan management route is based heavily on the census code with some modifications. The route is only available to admin and coder roles.
+The courtesan management route is borrowed in part from the census code. The route is only available to admin and coder roles.
 
 This view may look spammy, so please note the nav bar at the top that allows you to switch to a view of a single house/salon. The list is generated dynamically from all houses of approved courtesan characters. Unplayed houses won't get listed.
 
@@ -154,7 +156,7 @@ These fields will be shown in the webportal courtesan management route.
 These fields will be shown in the game client command **marque/list**.
 
 #### monthly_raise_amount
-This is the monthly marque raise for 'off-camera' assignations in percent. It is set to '3' but this can be adjusted. A value of '3' means that the marque will take 3 years and one month to complete after the debut. A higher value will have it complete faster. Additional raises for assignations referenced in rp can be handled through +requests.
+This is the monthly marque raise for 'off-camera' assignations in percent. It is set to '3' but this can be adjusted. A value of '3' means that the marque will take 37 months to complete after the debut. A higher value will have it complete faster. Additional raises for assignations referenced in rp can be handled through +requests.
 
 #### monthly_raise_cron
 Per default, the monthly marque raise cron job runs at 1:15 am on the first of each month. You can disable the job by replacing the value with '{}'.
