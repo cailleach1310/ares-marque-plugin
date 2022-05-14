@@ -23,10 +23,10 @@ In game view of the 'marque/list' command:
 ![Client](https://github.com/cailleach1310/ares-marque-plugin/blob/master/images/marque_list_command.PNG)
 
 Webportal view of the marque management route:
-![Web-Portal1](https://github.com/cailleach1310/ares-marque-plugin/blob/master/images/courtesan-management-route.PNG)
+![Web-Portal1](https://github.com/cailleach1310/ares-marque-plugin/blob/master/images/courtesan_management_route.PNG)
 
 Webportal view of the marque management house route:
-![Web-Portal2](https://github.com/cailleach1310/ares-marque-plugin/blob/master/images/courtesan-management-house-route.PNG)
+![Web-Portal2](https://github.com/cailleach1310/ares-marque-plugin/blob/master/images/courtesan_management_house_route.PNG)
 
 
 ### Prerequisites
