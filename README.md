@@ -19,13 +19,13 @@ The marque plugin requires only adjustments in the custom AresMUSH files, so it 
 * Additional raises can be applied by staff when appliccable.
 
 ### Screenshots
-In game view of the 'marque/list' command:
+#### In game view of the 'marque/list' command
 ![marque-list](/images/marque_list_command.PNG)
 
-Webportal view of the marque management route:
+#### Webportal view of the courtesan management route
 ![courtesan-management](/images/courtesan_management_route.PNG)
 
-Webportal view of the marque management house route:
+#### Webportal view of the marque management house route
 ![courtesan-management-house](/images/courtesan_management_house_route.PNG)
 
 
@@ -74,6 +74,8 @@ Make sure that 'Courtesan' is set as faction.
           values:
             Courtesan: Servants of Naamah.
     (...)
+
+Define available courtesan houses / salons for the game in the faction 'House'.
 
 #### /aresmush/game/config/ranks.yml
 Courtesan management relies on courtesan ranks as defined below. If you want to limit certain concepts, set the respective rank values to 'false'.
