@@ -73,39 +73,6 @@ Update with: custom_files/profile-custom-tabs.hbs
 
 ## Configuration
 
-### marque.yml 
-You don't have to modify the marque.yml for it to work, but you can make adjustments here. The keys in the yaml are explained below.
-
-#### achievements
-The plugin comes with two predefined story achievements, 'debuted' and 'acknowledged'. More can be added here.
-
-#### action_update_cron 
-The plugin is configured to check twice per hour for action updates (-> start marque, -> acknowledge marque).
-
-#### courtesan_fields
-These fields will be shown in the webportal courtesan management route.
-
-#### marque_fields
-These fields will be shown in the game client command **marque/list**.
-
-#### monthly_raise_amount
-This is the monthly marque raise for 'off-camera' assignations in percent. It is set to '3' but this can be adjusted. A value of '3' means that the marque will take 3 years and one month to complete after the debut. A higher value will have it complete faster. Additional raises for assignations referenced in rp can be handled through +requests.
-
-#### monthly_raise_cron
-Per default, the monthly marque raise cron job runs at 1:15 am on the first of each month. You can disable the job by deleting the key.
-
-#### monthly_raise_message
-This is the text of the +mail that will be sent to adepts. If you change the monthly_raise_amount, make sure to adjust this text accordingly.
-
-#### monthly_raise_title
-The title of the monthly raise mail for adepts (month will be added), and also for the +job that will created to notify staff.
-
-#### permissions
-In preparation of future adjustments, the permission: 'manage_marques' has been defined.
-
-#### shortcuts
-Here is a space where you can define shortcuts for the commands.
-
 ### Other plugins
 
 #### /aresmush/game/config/demographics.yml
@@ -170,6 +137,39 @@ For example:
         - title: Manage Marques
           route: courtesan-management
     (...)
+
+### marque.yml 
+You don't have to modify the marque.yml for the plugin to work, but you can make adjustments here. The keys in the yaml are explained below.
+
+#### achievements
+The plugin comes with two predefined story achievements, 'debuted' and 'acknowledged'. More can be added here.
+
+#### action_update_cron 
+The plugin is configured to check twice per hour for action updates (-> start marque, -> acknowledge marque).
+
+#### courtesan_fields
+These fields will be shown in the webportal courtesan management route.
+
+#### marque_fields
+These fields will be shown in the game client command **marque/list**.
+
+#### monthly_raise_amount
+This is the monthly marque raise for 'off-camera' assignations in percent. It is set to '3' but this can be adjusted. A value of '3' means that the marque will take 3 years and one month to complete after the debut. A higher value will have it complete faster. Additional raises for assignations referenced in rp can be handled through +requests.
+
+#### monthly_raise_cron
+Per default, the monthly marque raise cron job runs at 1:15 am on the first of each month. You can disable the job by replacing the value with '{}'.
+
+#### monthly_raise_message
+This is the text of the +mail that will be sent to adepts. If you change the monthly_raise_amount, make sure to adjust this text accordingly.
+
+#### monthly_raise_title
+The title of the monthly raise mail for adepts (month will be added), and also for the +job that will created to notify staff.
+
+#### permissions
+In preparation of future adjustments, the permission: 'manage_marques' has been defined.
+
+#### shortcuts
+Here is a space where you can define shortcuts for the commands.
 
 
 ## Uninstallation
