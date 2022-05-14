@@ -84,6 +84,10 @@ Courtesan management relies on courtesan ranks as defined below. If you want to 
             Courtesan: true
             Second: true
             Dowayne: true
+            
+Make sure that ranks_style is set to 'basic':
+
+      rank_style: basic
 
 #### /aresmush/game/config/chargen.yml
 
