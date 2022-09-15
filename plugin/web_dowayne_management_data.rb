@@ -2,7 +2,7 @@ module AresMUSH
   module Marque
     class DowayneManagementDataBuilder
       def build(char, viewer)
-        has_permission = (char == viewer) || (viewer && (viewer.is_admin?))
+        has_permission = (char == viewer) || (viewer && viewer.is_admin?)
         if !(char.has_permission?("manage_marques")) || !(has_permission)
            return nil
         end
