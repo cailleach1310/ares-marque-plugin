@@ -1,21 +1,22 @@
 # Ares Marque Plugin
-A plugin for handling marque stuff on games of Kushiel theme. 
+A plugin for handling marque stuff on games of Kushiel theme (version 1.1). 
 
 ## Credits
 Lyanna @ AresCentral
 
 ## Overview
-What is a Marque? It is the sign of a courtesan house or salon, tattoed on the back of an adept. It can take upto three years to finish, as progress will be gradual. The adept pays the tattoo artist with money they have earned through so called 'patron gifts'.
+What is a Marque? It is the sign of a courtesan house or salon, tattoed onto the back of an adept. It can take about three years to finish, as progress will be gradual. The adept pays the tattoo artist with money they have earned through so called 'patron gifts'.
 
 Anyone familiar with the books or games of Kushiel theme will know that the marque is an aspect that only affects a subset of characters, novices and adepts. In fact the marque does not necessarily require code at all - it could be handled simply on basis of +requests, with the player declaring at some point they are starting or have completed the marque. Continuing from my code developed for the pennmush game Marsilikos, this marque plugin has been a personal coding project to learn more about the way AresMUSH as a platform is wired together. Now I'm putting this plugin out there for anyone who'd like to use it. If you want some code-side marque support in your Kushiel-based game, go ahead, use it as is or adapt it to your needs.
 
-The marque plugin requires only adjustments in the custom AresMUSH files, so it shouldn't affect future merges and version upgrades. I've tested this on versions v0.106 - v0.108.
+The marque plugin requires only adjustments in the custom AresMUSH files, so it shouldn't affect future merges and version upgrades. I've tested this on versions v0.106 - v0.109.
 
 ### What this plugin covers
 * Chargen: Setting marque during chargen.
 * Profile: Making the marque part of the profile.
 * Staff-side marque management commands from within the game.
 * Staff-side marque management route from the webportal.
+* Optional: special permission 'manage_marques' for played courtesan house leaders to trigger starting or acknowledging marques.
 * Awarding achievements when completing phases of novice and adept.
 * Cron job based monthly marque progress for off camera assignations.
 * Additional raises can be applied by staff when applicable.
@@ -26,7 +27,7 @@ The marque plugin requires only adjustments in the custom AresMUSH files, so it 
 
 This staff command can be used to check current marque progresses on the client.
 
-### Webportal view of the courtesan management route
+### Webportal view of the courtesan management route (admin)
 ![courtesan-management](/images/courtesan_management_route.PNG)
 
 The courtesan management route is borrowed in part from the census code. The route is only available to admin and coder roles.
@@ -35,10 +36,15 @@ This view may look spammy, so please note the nav bar at the top that allows you
 
 Besides providing an overview of marque progresses, buttons will show in the 'Action' column if a staff-side action may be required. Novice characters will have their debut upcoming. Adepts who have completed their marque want to have it acknowledged. Both situations require communication about scenes to be had leading up to this change of status, and the eventual press of the button to trigger the start of a new phase.
 
-### Webportal view of the marque management house route
+### Webportal view of the marque management house route (admin)
 ![courtesan-management-house](/images/courtesan_management_house_route.PNG)
 
-Here we have the view for a single house. For now, this view is limited to admin and coder roles. It could be an option to make this available to house leaders such as dowaynes and seconds as well. Maybe something to be tackled in the next version. 
+Here we have the view for a single house. For now, this view is limited to admin and coder roles. 
+
+### Webportal view of the house management tab (courtesan house leaders)
+![courtesan-management-house](/images/dowayne_house_management.PNG)
+
+This is the view for courtesan house leaders (dowaynes). 
 
 ## Prerequisites
 The marque plugin relies on the fact that 'Courtesan' is set up as a faction (group), and that ranks 'Novice', 'Adept', 'Courtesan', etc have been defined to that faction. When moving on from novice to adept rank, the marque will be started. When the marque is complete and has been acknowledged, the rank will change to (fully marqued) 'Courtesan'. Please make sure to add availaible courtesan houses and salons to the group 'House', as **marque/list** and the webportal courtesan management pages will need this for their output. 
@@ -176,9 +182,19 @@ In preparation of future adjustments, the permission: 'manage_marques' has been 
 #### shortcuts
 Here is a space where you can define shortcuts for the commands.
 
-
 ## Uninstallation
 Removing the plugin requires some code fiddling. See [Uninstalling Plugins](https://www.aresmush.com/tutorials/code/extras.html#uninstalling-plugins).
+
+## Setting Permissions
+
+In order for dowaynes to be able to trigger starting and acknowledging marques, admin will need to create a role and add the permission 'manage_marques' to it, like in the example below.
+
+    role/create dowayne
+    %% Role dowayne created.
+    role/addpermission dowayne=manage_marques
+    %% Role permissions updated.
+    role/assign Christine=dowayne
+    %% You assign the dowayne role to Christine.
 
 ## License
 Same as [AresMUSH](https://aresmush.com/license).
