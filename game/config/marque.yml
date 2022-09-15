@@ -9,6 +9,7 @@ marque:
       type: story
   action_update_cron:
     minute:
+    - 0
     - 30
   courtesan_fields:
   - field: group
@@ -38,7 +39,7 @@ marque:
   - field: last_on
     width: 20
     title: Last on
-  monthly_raise_amount: 4
+  monthly_raise_amount: 3
   monthly_raise_cron:
     day:
     - 1
