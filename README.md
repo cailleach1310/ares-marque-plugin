@@ -20,6 +20,7 @@ The marque plugin requires only adjustments in the custom AresMUSH files, so it 
 * Awarding achievements when completing phases of novice and adept.
 * Cron job based monthly marque progress for off camera assignations.
 * Additional raises can be applied by staff when applicable.
+* Starting/acknowledging a marque will trigger a job, so that admin are notified of the change.
 
 ## Screenshots
 ### In game view of the 'marque/list' command
@@ -39,12 +40,12 @@ Besides providing an overview of marque progresses, buttons will show in the 'Ac
 ### Webportal view of the marque management house route (admin)
 ![courtesan-management-house](/images/courtesan_management_house_route.PNG)
 
-Here we have the view for a single house. For now, this view is limited to admin and coder roles. 
+Here we have the view for a single house. This view is limited to admin and coder roles. 
 
 ### Webportal view of the house management tab (courtesan house leaders)
 ![courtesan-management-house](/images/dowayne_house_management.PNG)
 
-This is the view for courtesan house leaders (dowaynes). 
+This is the view for courtesan house leaders (dowaynes), as a tab in their profile page. The view is limited to members of their house.
 
 ## Prerequisites
 The marque plugin relies on the fact that 'Courtesan' is set up as a faction (group), and that ranks 'Novice', 'Adept', 'Courtesan', etc have been defined to that faction. When moving on from novice to adept rank, the marque will be started. When the marque is complete and has been acknowledged, the rank will change to (fully marqued) 'Courtesan'. Please make sure to add availaible courtesan houses and salons to the group 'House', as **marque/list** and the webportal courtesan management pages will need this for their output. 
@@ -170,20 +171,11 @@ This is the monthly marque raise for 'off-camera' assignations in percent. It is
 #### monthly_raise_cron
 Per default, the monthly marque raise cron job runs at 1:15 am on the first of each month. You can disable the job by replacing the value with '{}'.
 
-#### monthly_raise_message
-This is the text of the +mail that will be sent to adepts. If you change the monthly_raise_amount, make sure to adjust this text accordingly.
-
-#### monthly_raise_title
-The title of the monthly raise mail for adepts (month will be added), and also for the +job that will created to notify staff.
-
 #### permissions
-In preparation of future adjustments, the permission: 'manage_marques' has been defined.
+In order to allow non-admin to handle marques in a certain context, the permission: 'manage_marques' has been defined.
 
 #### shortcuts
 Here is a space where you can define shortcuts for the commands.
-
-## Uninstallation
-Removing the plugin requires some code fiddling. See [Uninstalling Plugins](https://www.aresmush.com/tutorials/code/extras.html#uninstalling-plugins).
 
 ## Setting Permissions
 
@@ -195,6 +187,9 @@ In order for dowaynes to be able to trigger starting and acknowledging marques, 
     %% Role permissions updated.
     role/assign Christine=dowayne
     %% You assign the dowayne role to Christine.
+
+## Uninstallation
+Removing the plugin requires some code fiddling. See [Uninstalling Plugins](https://www.aresmush.com/tutorials/code/extras.html#uninstalling-plugins).
 
 ## License
 Same as [AresMUSH](https://aresmush.com/license).
