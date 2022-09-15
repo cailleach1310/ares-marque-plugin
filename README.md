@@ -45,7 +45,7 @@ Here we have the view for a single house. This view is limited to admin and code
 ### Webportal view of the house management tab (courtesan house leaders)
 ![courtesan-management-house](/images/dowayne_house_management.PNG)
 
-This is the view for courtesan house leaders (dowaynes), as a tab in their profile page. The view is limited to members of their house.
+This is the view for courtesan house leaders (dowaynes), as a tab in their profile page. The view is limited to members of their house, and the tab is only visible for the dowayne and admin.
 
 ## Prerequisites
 The marque plugin relies on the fact that 'Courtesan' is set up as a faction (group), and that ranks 'Novice', 'Adept', 'Courtesan', etc have been defined to that faction. When moving on from novice to adept rank, the marque will be started. When the marque is complete and has been acknowledged, the rank will change to (fully marqued) 'Courtesan'. Please make sure to add availaible courtesan houses and salons to the group 'House', as **marque/list** and the webportal courtesan management pages will need this for their output. 
@@ -138,7 +138,7 @@ Make sure that ranks_style is set to 'basic':
             %xcmarque%xn - shows the current progress.
 
 #### /aresmush/game/config/website.yml
-Add a route to the top bar menu for the admin management page. This route is limited to admin and coder roles for now. 
+Add a route to the top bar menu for the admin management page. This route is limited to admin and coder roles. 
 
 For example:
 
@@ -178,7 +178,6 @@ In order to allow non-admin to handle marques in a certain context, the permissi
 Here is a space where you can define shortcuts for the commands.
 
 ## Setting Permissions
-
 In order for dowaynes to be able to trigger starting and acknowledging marques, admin will need to create a role and add the permission 'manage_marques' to it, like in the example below.
 
     role/create dowayne
