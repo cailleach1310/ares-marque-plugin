@@ -8,4 +8,5 @@ en:
         rank_courtesan_title: "Courtesans By Rank"
         courtesan_types: "Courtesan Types"
         courtesan_groups: "Courtesan Groups Available"
+        monthly_raise_message: "Due to the standard monthly marque progress, another %{monthly_raise_amount} percent have been added to %{name}'s Marque. If %{name} had additional assignations scened, please put in a request and we will apply a bonus where applicable. \n\n%{name}'s marque is now at %{current}%."
 

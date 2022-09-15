@@ -18,7 +18,7 @@ module AresMUSH
         end
         
         Global.logger.info "The novice #{char.name} has debuted and has become an adept in Naamah's service (triggered by #{enactor.name}). #{char.name} have started work on their marque ."
-        Marque.do_marque_start(char)
+        Marque.do_marque_start(char,enactor)
         {
             name: char.name
         }

@@ -7,3 +7,9 @@
          <div class="progress-value">{{{this.char.custom.marque}}}%</div>
       </div>
   </div>
+  <div id="systemdowayne" class="tab-pane fade">
+     {{#if this.char.custom.house_list}}
+         <h3>House Management</h3>
+         <ProfileDowayne @house={{this.char.custom.house_list}} />
+     {{/if}}
+  </div>

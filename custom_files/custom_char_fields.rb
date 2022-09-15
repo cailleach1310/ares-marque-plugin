@@ -3,7 +3,8 @@ module AresMUSH
     class CustomCharFields
       
       def self.get_fields_for_viewing(char, viewer)
-        return { marque: char.marque.to_i }
+        return { marque: char.marque.to_i,
+                 house_list: Marque.build_web_house_list(char, viewer) }
       end
     
       def self.get_fields_for_editing(char, viewer)

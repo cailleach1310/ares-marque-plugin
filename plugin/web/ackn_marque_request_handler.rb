@@ -19,7 +19,7 @@ module AresMUSH
         end
         
         Global.logger.info "The adept #{char.name} had the marque acknowledged (by #{enactor.name}). #{char.name} is a fully marqued courtesan now."
-        Marque.do_marque_acknowledgement(char)
+        Marque.do_marque_acknowledgement(char,enactor)
         {
             name: char.name
         }

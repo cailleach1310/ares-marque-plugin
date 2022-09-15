@@ -25,7 +25,7 @@ module AresMUSH
             client.emit_failure "The marque is not yet complete!"
             return nil
           else 
-            Marque.do_marque_acknowledgement(model)
+            Marque.do_marque_acknowledgement(model,enactor)
             client.emit_success "The marque has been acknowledged! #{model.name} now has new status of fully marqued courtesan."
             return true
           end

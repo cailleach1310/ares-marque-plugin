@@ -10,18 +10,22 @@ module AresMUSH
       actor && actor.has_permission?("manage_marques")
     end
 
-    def self.do_marque_start(target)
+    def self.do_marque_start(target,enactor)
       target.update(marque: 0)
       target.update(action: nil)
       target.update(ranks_rank: "Adept")
       Achievements.award_achievement(target, "debuted")
+      message =  target.name + " has started working on the marque. This usually happens after the debut has happened.\n\n(triggered by " + enactor.name + ")"
+      Jobs.create_job("MISC", "Marque Started: " + target.name, message, Game.master.system_character)
     end
 
-    def self.do_marque_acknowledgement(target)
+    def self.do_marque_acknowledgement(target,enactor)
       target.update(marque: nil)
       target.update(action: nil)
       target.update(ranks_rank: "Courtesan")
       Achievements.award_achievement(target, "marque_acknowledged")
+      message = target.name + " has finished the marque and had it acknowledged. " + target.name + " is a fully marqued courtesan now.\n\n(triggered by " + enactor.name + ")"
+      Jobs.create_job("MISC", "Marque Acknowledged: " + target.name, message, Game.master.system_character)
     end
 
     def self.adept_chars()

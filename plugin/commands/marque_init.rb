@@ -22,7 +22,7 @@ module AresMUSH
             client.emit_failure "Initialising marque is only possible for a novice after their debut!"
             return nil
          else 
-            Marque.do_marque_start(model)
+            Marque.do_marque_start(model,enactor)
             client.emit_success "The marque has been set to zero! #{model.name} now has new status of adept."
             return true
           end   

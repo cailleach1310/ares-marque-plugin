@@ -17,5 +17,10 @@ module AresMUSH
     Character.all.select { |c| (groups = c.groups;groups["faction"] == "Courtesan") && (c.has_role?("approved")) }
   end
 
+  def self.build_web_house_list(char, viewer)
+    builder = DowayneManagementDataBuilder.new
+    builder.build(char, viewer)
+  end
+
  end
 end

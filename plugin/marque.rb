@@ -8,7 +8,7 @@ module AresMUSH
     end
 
     def self.version
-      "1.0"
+      "1.1"
     end
 
     def self.shortcuts
