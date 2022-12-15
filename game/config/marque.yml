@@ -48,5 +48,5 @@ marque:
     minute:
     - 15
   permissions:
-    manage_marques: Allows managing other characters' marques.
+    manage_marques: Can trigger starting or acknowledging other characters' marques, hence changing their rank.
   shortcuts: {}
