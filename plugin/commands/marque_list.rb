@@ -9,7 +9,12 @@ module AresMUSH
       end	
 
       def handle
-        adept_chars = Marque.adept_chars
+        if enactor.has_role?("admin")
+           adept_chars = Marque.adept_chars
+        else
+           house = enactor.groups["house"]
+           adept_chars = Marque.adept_chars.select {|c| c.groups['house'] == house }
+        end
 
         template = MarqueTemplate.new adept_chars
 	client.emit template.render
