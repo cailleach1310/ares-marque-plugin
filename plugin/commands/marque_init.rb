@@ -21,7 +21,10 @@ module AresMUSH
           elsif model.ranks_rank != "Novice"
             client.emit_failure "Initialising marque is only possible for a novice after their debut!"
             return nil
-         else 
+          elsif (!enactor.is_admin?) && (model.groups["house"] != enactor.groups["house"])
+            client.emit_failure "You aren't allowed to start the Marque of another house!"
+            return nil
+          else 
             Marque.do_marque_start(model,enactor)
             client.emit_success "The marque has been set to zero! #{model.name} now has new status of adept."
             return true
