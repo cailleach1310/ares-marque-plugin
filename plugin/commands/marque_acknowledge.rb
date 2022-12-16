@@ -24,6 +24,9 @@ module AresMUSH
           elsif model.marque != "100"
             client.emit_failure "The marque is not yet complete!"
             return nil
+          elsif (!enactor.is_admin?) && (model.groups["house"] != enactor.groups["house"])
+            client.emit_failure "You aren't allowed to acknowledge the Marque of another house!"
+            return nil
           else 
             Marque.do_marque_acknowledgement(model,enactor)
             client.emit_success "The marque has been acknowledged! #{model.name} now has new status of fully marqued courtesan."
