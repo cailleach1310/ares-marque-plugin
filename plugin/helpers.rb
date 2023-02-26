@@ -60,6 +60,13 @@ module AresMUSH
      target.update(action: new_action )
    end
 
+   def self.uninstall_plugin
+     Character.all.each do |c|
+       c.update(marque: nil)
+       c.update(action: nil)
+     end
+   end
+    
     def self.general_field(char, field_type, value)
       case field_type
 
