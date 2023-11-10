@@ -9,7 +9,7 @@ What is a Marque? It is the sign of a courtesan house or salon, tattoed onto the
 
 Anyone familiar with the books or games of Kushiel theme will know that the marque is an aspect that only affects a subset of characters, novices and adepts. In fact the marque does not necessarily require code at all - it could be handled simply on basis of +requests, with the player declaring at some point they are starting or have completed the marque. Continuing from my code developed for the pennmush game Marsilikos, this marque plugin has been a personal coding project to learn more about the way AresMUSH as a platform is wired together. Now I'm putting this plugin out there for anyone who'd like to use it. If you want some code-side marque support in your Kushiel-based game, go ahead, use it as is or adapt it to your needs.
 
-The marque plugin requires only adjustments in the custom AresMUSH files, so it shouldn't affect future merges and version upgrades. I've tested this on versions v0.106 - v0.109.
+The marque plugin requires only adjustments in the custom AresMUSH files, so it shouldn't affect future merges and version upgrades. I've tested this on versions v0.106 - v0.109. Update: The latest version of this plugin is compatible with AresMUSH 1.0.9 (Ember 4). If upgrading this plugin from a previous version, you'll only have to adjust chargen-custom.hbs, profile-custom.hbs and profile-custom-tabs.hbs with their latest versions, there is no need to re-install the plugin. 
 
 ### What this plugin covers
 * Chargen: Setting marque during chargen.
